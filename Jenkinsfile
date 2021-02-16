@@ -19,6 +19,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 sh '''
+                    source activate app_env
                     make test
                 '''
             }
